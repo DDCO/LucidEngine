@@ -83,6 +83,7 @@
     <ClInclude Include="Context.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
@@ -90,6 +91,7 @@
     <ClCompile Include="Context.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>

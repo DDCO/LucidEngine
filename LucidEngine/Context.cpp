@@ -37,7 +37,7 @@ LucidEngine::Context::~Context()
 	WindowContext = nullptr;
 }
 
-void LucidEngine::Context::OpenWindow()
+void LucidEngine::Context::OpenWindow(MainLoopCallback callback)
 {
 	glfwMakeContextCurrent(WindowContext);
 	
@@ -53,6 +53,8 @@ void LucidEngine::Context::OpenWindow()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		/* Render here */
+		if (callback != NULL)
+			(*callback)();
 
 		glfwSwapBuffers(WindowContext);
 		glfwPollEvents();

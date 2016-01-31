@@ -6,6 +6,8 @@
 
 namespace LucidEngine
 {
+	typedef void(*MainLoopCallback)();
+
 	class Context
 	{
 	public:
@@ -16,7 +18,7 @@ namespace LucidEngine
 		void SetDimensions(int width, int height);
 		void SetTitle(char * title);
 		char * GetTitle();
-		void OpenWindow();
+		void OpenWindow(MainLoopCallback callback = NULL);
 		~Context();
 	private:
 		GLFWwindow * WindowContext;
